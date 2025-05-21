@@ -154,7 +154,4 @@ This guide breaks down the 14 core stages of an attacker’s operation as define
 
 ---
 
-### 📘 Why This Matters
-Understanding these steps helps defenders detect and respond to threats more effectively. Use this framework to anticipate attacker behavior and improve your security strategy.
 
----
