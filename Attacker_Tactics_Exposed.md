@@ -1,173 +1,160 @@
-1. Reconnaissance
-What it is: Attacker gathers information about the target.
+# MITRE ATT&CK: Step-by-Step Guide to Attacker Tactics
 
-Goal: Learn who, what, and where to attack.
+This guide breaks down the 14 core stages of an attacker’s operation as defined in the MITRE ATT&CK framework. Each stage is essential to understand how attackers plan, execute, and complete cyberattacks — and how defenders can detect and stop them.
 
-Example:
+---
 
-Scanning your website
+## 1. Reconnaissance
+**What it is:** The attacker gathers information about the target.  
+**Goal:** Learn who, what, and where to attack.
 
-Searching LinkedIn for employees
+**Examples:**
+- Scanning your website
+- Searching LinkedIn for employees
+- Finding open ports
 
-Finding open ports
+---
 
-2. Resource Development
-What it is: Attacker builds or buys tools for the attack.
+## 2. Resource Development
+**What it is:** The attacker builds or purchases tools and infrastructure.  
+**Goal:** Prepare for the attack.
 
-Goal: Get ready.
+**Examples:**
+- Creating phishing websites
+- Writing malware
+- Buying stolen credentials or fake domains
 
-Example:
+---
 
-Creating phishing websites
+## 3. Initial Access
+**What it is:** The attacker gains access to your system or network.  
+**Goal:** First step inside.
 
-Writing malware
+**Examples:**
+- Sending a phishing email with a malicious link
+- Exploiting a vulnerable server
+- Logging in with stolen credentials
 
-Buying stolen passwords or fake domains
+---
 
-3. Initial Access
-What it is: Attacker gets into your system or network.
+## 4. Execution
+**What it is:** The attacker runs malicious code on the system.  
+**Goal:** Launch the payload.
 
-Goal: First step in.
+**Examples:**
+- Running a backdoor or malware
+- Opening a malicious attachment
+- Executing PowerShell scripts
 
-Example:
+---
 
-Sending a phishing email with a malicious link
+## 5. Persistence
+**What it is:** The attacker ensures continued access to the system.  
+**Goal:** Remain inside after reboot or logout.
 
-Exploiting a vulnerable server
+**Examples:**
+- Creating hidden user accounts
+- Installing a backdoor
+- Modifying startup settings
 
-Using stolen credentials to log in
+---
 
-4. Execution
-What it is: Attacker runs malicious code on the target system.
+## 6. Privilege Escalation
+**What it is:** The attacker obtains higher-level permissions.  
+**Goal:** Gain full control.
 
-Goal: Make their program or script run.
+**Examples:**
+- Exploiting a vulnerability to become admin
+- Stealing a more privileged user’s credentials
 
-Example:
+---
 
-Running a backdoor or malware
+## 7. Defense Evasion
+**What it is:** The attacker avoids detection.  
+**Goal:** Stay hidden.
 
-Opening a malicious attachment
+**Examples:**
+- Disabling antivirus software
+- Obfuscating malicious code
+- Clearing logs
 
-Running a script via PowerShell
+---
 
-5. Persistence
-What it is: Attacker sets a way to stay inside even after reboot or logout.
+## 8. Credential Access
+**What it is:** The attacker tries to steal usernames, passwords, or tokens.  
+**Goal:** Gain legitimate access.
 
-Goal: Don't get kicked out.
+**Examples:**
+- Keylogging
+- Dumping password hashes
+- Internal phishing
 
-Example:
+---
 
-Creating a hidden user account
+## 9. Discovery
+**What it is:** The attacker explores the system and network.  
+**Goal:** Understand the environment.
 
-Installing a backdoor
+**Examples:**
+- Mapping internal systems
+- Finding file shares
+- Identifying active users
 
-Modifying startup settings
+---
 
-6. Privilege Escalation
-What it is: Attacker gains higher permissions (like admin/root).
+## 10. Lateral Movement
+**What it is:** The attacker moves between systems inside the network.  
+**Goal:** Reach valuable targets.
 
-Goal: Get full control.
+**Examples:**
+- Remote Desktop Protocol (RDP) access
+- Using stolen credentials to log into other machines
 
-Example:
+---
 
-Exploiting a bug to become an admin
+## 11. Collection
+**What it is:** The attacker gathers target data.  
+**Goal:** Prepare for data theft or misuse.
 
-Stealing credentials of a more powerful user
+**Examples:**
+- Copying sensitive documents
+- Logging keystrokes
+- Capturing screenshots
 
-7.  Defense Evasion
-What it is: Attacker hides to avoid detection by antivirus, firewall, etc.
+---
 
-Goal: Stay invisible.
+## 12. Command and Control (C2)
+**What it is:** The attacker communicates with compromised systems remotely.  
+**Goal:** Maintain control and issue commands.
 
-Example:
+**Examples:**
+- Malware contacting an external server
+- Attacker sending instructions to download or encrypt files
 
-Disabling antivirus
+---
 
-Obfuscating code
+## 13. Exfiltration
+**What it is:** The attacker steals and transmits the data out of the network.  
+**Goal:** Get the data out.
 
-Clearing logs
+**Examples:**
+- Uploading data to cloud storage
+- Sending data via encrypted email
 
-8. Credential Access
-What it is: Attacker tries to steal usernames, passwords, tokens.
+---
 
-Goal: Move further using legit access.
+## 14. Impact
+**What it is:** The attacker causes harm to systems or data.  
+**Goal:** Disrupt, destroy, or demand ransom.
 
-Example:
+**Examples:**
+- Deploying ransomware
+- Deleting critical files
+- Defacing a website
 
-Keylogging
+---
 
-Dumping password hashes
+### 📘 Why This Matters
+Understanding these steps helps defenders detect and respond to threats more effectively. Use this framework to anticipate attacker behavior and improve your security strategy.
 
-Phishing again inside the network
-
-9. Discovery
-What it is: Attacker explores the network or system to find what else is there.
-
-Goal: Know where to go next.
-
-Example:
-
-Finding file shares
-
-Mapping internal systems
-
-Seeing who the users are
-
-10. Lateral Movement
-What it is: Attacker moves from one system to another inside the network.
-
-Goal: Spread and reach valuable targets.
-
-🧠 Example:
-
-RDP to another machine
-
-Using stolen credentials to access servers
-
-11. Collection
-What it is: Attacker gathers the data they came for.
-
-Goal: Prepare to steal or use the data.
-
-Example:
-
-Copying sensitive documents
-
-Logging keystrokes
-
-Recording screenshots
-
-12.  Command and Control (C2)
-What it is: Attacker communicates with the hacked system remotely.
-
-Goal: Keep control, send instructions.
-
-Example:
-
-The malware connects to a server
-
-Attacker sends commands like "steal more data" or "install ransomware"
-
-13.  Exfiltration
-What it is: Attacker steals the data and sends it out.
-
-Goal: Get the loot out.
-
-Example:
-
-Uploading files to a cloud server
-
-Encrypting and emailing sensitive info
-
-14. Impact
-What it is: Attacker causes damage, disruption, or destruction.
-
-Goal: Final attack or purpose.
-
-Example:
-
-Encrypting files (ransomware)
-
-Wiping systems
-
-Defacing a website
+---
